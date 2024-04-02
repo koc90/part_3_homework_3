@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def set_initial_parameters(length):
     return (np.random.random(size=(length, 1)) - 0.5) * 10
 
@@ -10,8 +11,8 @@ def linear_regression_hypothesis(X, w):
 
 def error_function(h, y):
     m = len(h)
-    errors = (h - y) ** 2
-    return errors.sum() / (2 * m)
+    errors = h - y
+    return np.dot(errors.T, errors) / (2 * m)
 
 
 def error_gradient(h, y, X):

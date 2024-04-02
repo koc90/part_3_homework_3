@@ -25,8 +25,12 @@ x1 = np.array(x1_df)
 x2 = np.array(x2_df)
 x3 = np.array(x3_df)
 
+
 x1_norm = normalize(x1)
 x2_norm = normalize(x2)
 x3_norm = normalize(x3)
 
-X = np.array([x1_norm, x2_norm, x3_norm]).T
+m = len(x1)
+x0 = np.ones(m)
+
+X = np.array([x0, x1_norm, x2_norm, x3_norm]).T

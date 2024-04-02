@@ -1,9 +1,5 @@
 import numpy as np
 
-
-a = np.array([1, 2])
-
-
 def set_initial_parameters(length):
     return (np.random.random(size=(length, 1)) - 0.5) * 10
 
